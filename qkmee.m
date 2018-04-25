@@ -1,4 +1,6 @@
-classdef qkmee < kmee
+% Copyright 2018, Samuel Lichtenheld, All rights reserved.
+
+classdef qkmee < kmee_qip
     properties
         quantize_e
         past_centers
@@ -12,7 +14,7 @@ classdef qkmee < kmee
             self.past_centers = zeros(1,L);
             self.past_centers(L) = 1;
             self.quantize_e = qe;
-            train@kmee(self,L,MEE,h,mu,X,d_vect,val_num);
+            train@kmee_qip(self,L,MEE,h,mu,X,d_vect,val_num);
         end
     end
     methods (Access = protected)
@@ -56,7 +58,7 @@ classdef qkmee < kmee
             end
         end
         function d = params(self)
-            d = strcat(params@kmee(self),', Quantization Thresh=', num2str(self.quantize_e)); 
+            d = strcat(params@kmee_qip(self),', Quantization Thresh=', num2str(self.quantize_e)); 
         end
     end
 end

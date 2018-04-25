@@ -1,3 +1,4 @@
+% Copyright 2018, Samuel Lichtenheld, All rights reserved.
 
 classdef rls < lms
 	properties
@@ -39,7 +40,7 @@ classdef rls < lms
 			self.w_hist(n,:) = self.w; 
 		end
 				function d = params(self)
-			d = strcat('Filter Order=', num2str(self.filterOrder),' ,Step Size=', num2str(self.stepSize));
+			d = strcat('alpha=',num2str(self.alpha) ,', Filter Order=', num2str(self.filterOrder),' ,Step Size=', num2str(self.stepSize));
 		end
 	end 
 end

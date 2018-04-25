@@ -1,3 +1,5 @@
+% Copyright 2018, Samuel Lichtenheld, All rights reserved.
+
 classdef kmee_shannon < klms
     properties
         L % window size

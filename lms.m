@@ -1,3 +1,4 @@
+% Copyright 2018, Samuel Lichtenheld, All rights reserved.
 
 classdef lms < AdaptFilt
 	properties

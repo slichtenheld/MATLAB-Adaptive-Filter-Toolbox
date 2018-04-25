@@ -1,4 +1,4 @@
-
+% Copyright 2018, Samuel Lichtenheld, All rights reserved.
 
 classdef (Abstract) AdaptFilt < handle
 	properties(Abstract)
@@ -35,8 +35,9 @@ classdef (Abstract) AdaptFilt < handle
 				
 				self.updateModel(d_vect,X,n);
 
-				% FIXME: add if val_num=0 continue
-				
+				if val_num==0 && n~=num_datapts
+					continue
+				end
 				% Learning NMSE = only test on data trained so far
 				if mod(n,val_num)==0
 					self.nmse_hist(int16(n/val_num)+mod(n,val_num)) = self.test(X(1:n,:),d_vect(1:n));
