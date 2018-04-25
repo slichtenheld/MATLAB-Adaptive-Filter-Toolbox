@@ -10,13 +10,15 @@ One example is the KMEE algorithm described in
 
 ## How to use the framework
 From within Matlab command line
-'''
+
+```
 >> l = lms(); % declare object
 >> l.train(.001,X,d,1); % train model (stepsize, input Matrix, output, how often to check learning nmse)
 >> l.test(Xtest,dtest); % test data
 >> l.plotVal; % will plot learning curve
 >> l.plotW; % will plot weights % only applicable to linear models
-'''
+
+```
 
 
 
