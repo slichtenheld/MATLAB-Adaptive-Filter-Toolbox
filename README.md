@@ -1,4 +1,4 @@
-# MATLAB Adaptive Filter Framework
+# MATLAB Adaptive Filter Toolbox
 
 The benefits of this code is that it allows you to train
 your machine learning models from within the MATLAB command line.
