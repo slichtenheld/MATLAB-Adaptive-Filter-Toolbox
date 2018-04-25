@@ -43,6 +43,12 @@ The included readDataStream converts a stream of data into this format.
 * Look to LMS or KLMS to see how to implement a new filter type
 * If a variant of LMS or KLMS, extend from LMS or QKLMS and follow filter that does the same
 
+## Sample Test
+Run 
+```
+>> test
+```
+to test all included algorithms.
 
 ## Included Algorithms
 * lms
